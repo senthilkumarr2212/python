@@ -31,7 +31,7 @@ for i in range(101):
 # Task 5
 guessnum = input("Enter your Guess Number :")
 num = 20
-if guessnum == num:
+if int(guessnum) == num:
     print("You guessed correctly")
 elif int(guessnum) > num:
     print("Your Guess value is greater than the actual number")

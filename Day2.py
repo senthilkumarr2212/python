@@ -123,6 +123,13 @@ argskw("India", "Canada", "Japan", "Germany", "Australia", Country: "India", Cap
 
 
 
+"""
+Go through PEP 20 and let me know your fav one!
+"""
+Now is better than never.
+
+
+
 #Task 9
 """
 Do a while loop with and without else block getting invoked
@@ -183,9 +190,7 @@ print(keyLonger)
 implement nested list comp in any use case
 """
 num = [[1, 2, 3], [4, 5, 6], [7, 8, 9, 10]] 
-
 values = [val for numlist in num for val in numlist] 
-
 """Return all the values inside the numlist""
 print(values)
 

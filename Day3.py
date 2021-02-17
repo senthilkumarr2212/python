@@ -99,8 +99,6 @@ inputlanguage = input("Please enter the coding language: ")
 devlanguage = inputlanguage.upper()
 s = Developer("")
 s.code(devlanguage)
-print(devlanguage.__repr__())
-print(devlanguage.__str__())
 
 #Task 4 - b
 """

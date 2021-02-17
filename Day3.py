@@ -1,3 +1,4 @@
+#Task 1
 #dictionaries
 #Task 1 - a
 """
@@ -28,7 +29,7 @@ n = [1, 2, 5, 2, 3, 1, 4, 5]
 num = {x**2 for x in n}
 print(num)
 
-
+#Task 3
 """
 Given a list of tuples with current and min balances: [("Guido", 2000, 500), ("Raymond", -52, 1000), ("Jack", 900, 1000), ("Brandon", 2000, 0)] use comprehensions to get the below:
 """
@@ -71,7 +72,7 @@ list_name_cur_balance = [(name, cur_balance) for (name, cur_balance, min_balance
 print(list_name_cur_balance)
 
 
-
+#Task 4
 """
 Write a Developer class that has a code function and a languages list.
 """

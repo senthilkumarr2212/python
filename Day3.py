@@ -29,6 +29,8 @@ n = [1, 2, 5, 2, 3, 1, 4, 5]
 num = {x**2 for x in n}
 print(num)
 
+
+
 #Task 3
 """
 Given a list of tuples with current and min balances: [("Guido", 2000, 500), ("Raymond", -52, 1000), ("Jack", 900, 1000), ("Brandon", 2000, 0)] use comprehensions to get the below:
@@ -72,6 +74,7 @@ list_name_cur_balance = [(name, cur_balance) for (name, cur_balance, min_balance
 print(list_name_cur_balance)
 
 
+
 #Task 4
 """
 Write a Developer class that has a code function and a languages list.
@@ -99,6 +102,8 @@ inputlanguage = input("Please enter the coding language: ")
 devlanguage = inputlanguage.upper()
 s = Developer("")
 s.code(devlanguage)
+print(devlanguage.__repr__())
+print(devlanguage.__str__())
 
 #Task 4 - b
 """
@@ -110,3 +115,76 @@ s.resume()
 """
 Write a SrDeveloper class that inherits Developer and adds review function. review should also be limited to languages list.
 """
+class SrDeveloper(Developer):
+    def __init__(self):
+        Developer.__init__(self)
+        self.reviews = []
+    def review(self,review):            
+        if(len(self.reviews)<=len(self.devlanguages)):
+            self.reviews.append(review)   
+            print(self.reviews)
+
+srdevrev = SrDeveloper()
+srdevrev.review("Good")
+
+#Task 4 - C
+"""
+Write a TechLead class that inherits from SrDeveloper and adds design function
+"""
+class TechLead(SrDeveloper):
+    def __init__(self):
+        SrDeveloper.__init__(self)
+
+    def design(self):
+        print("Design for TechLead")
+
+tlead = TechLead()
+tlead.design()
+
+
+
+#Task 5
+"""
+create a class that provides the factorials for the list of numbers provided.
+"""
+import math
+L = [1, 2, 3, 4, 5, 6]
+class Factorial:
+    def factorial(self, fact):
+         for num in fact:
+            print(math.factorial(num))
+
+
+fact = Factorial()
+fact.factorial(L)
+
+
+
+#Task 6
+"""
+import a func from a module and call it to print some output
+"""
+from ImportProgram import callFunction
+callFunction()
+
+
+
+#Task 7
+"""
+import a func and rename it to use in your module from another
+"""
+from ImportProgram import callFunction as changeFunc
+changeFunc()
+
+
+
+#Task 8
+"""
+create a module that prints "I'm running" only when it's ran as a script (not as a module using import)
+"""
+
+def imrunning():
+    if __name__ == "__main__":
+        print("I'm Running")
+
+imrunning()
